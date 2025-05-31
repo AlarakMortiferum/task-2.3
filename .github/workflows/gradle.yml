@@ -7,15 +7,14 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'temurin'
@@ -23,5 +22,11 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build with Gradle
-        run: ./gradlew build
+      - name: Run tested app
+        run: java -jar artifacts/app-ibank-build-for-testers.jar &
+
+      - name: Wait for app to start
+        run: sleep 10
+
+      - name: Run tests
+        run: ./gradlew test -Dselenide.headless=true --info

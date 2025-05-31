@@ -10,17 +10,18 @@ repositories {
 }
 
 dependencies {
-    // Selenide
-    testImplementation 'com.codeborne:selenide:6.19.1'
+    // Selenide — используйте рекомендованную актуальную версию
+    testImplementation 'com.codeborne:selenide:7.5.0'
 
-    // JUnit
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    // JUnit Jupiter
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
 
-    // Faker
+    // Faker для генерации данных
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
 
-    // Для работы с датами
-    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    // Lombok для @Value и других аннотаций
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
 }
 
 test {

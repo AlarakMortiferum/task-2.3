@@ -10,16 +10,9 @@ repositories {
 }
 
 dependencies {
-    // Selenide — используйте рекомендованную актуальную версию
 
-
-    // JUnit Jupiter
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
-
-    // Faker для генерации данных
-    testImplementation 'com.github.javafaker:javafaker:1.0.2'
-
-    // Lombok для @Value и других аннотаций
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testImplementation 'com.codeborne:selenide:6.19.1'
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
 }

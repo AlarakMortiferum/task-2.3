@@ -3,7 +3,6 @@ package ru.netology.patterns.page;
 import com.codeborne.selenide.SelenideElement;
 import ru.netology.patterns.data.DataGenerator.UserInfo;
 import org.openqa.selenium.Keys;
-
 import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -18,7 +17,6 @@ public class DeliveryOrderPage {
     private SelenideElement agreeCheckbox = $("[data-test-id=agreement]");
     private SelenideElement submitButton = $("[type=button]");
     private SelenideElement successNotification = $("[data-test-id=success-notification]");
-    private SelenideElement replanNotification = $("[data-test-id=replan-notification]");
     private SelenideElement replanButton = $("[data-test-id=replan-notification] button.button");
 
     public void fillForm(UserInfo user, String date) {
@@ -39,7 +37,6 @@ public class DeliveryOrderPage {
     }
 
     public void confirmReplan() {
-        replanNotification.shouldBe(visible);
-        replanButton.shouldBe(visible).click();
+        replanButton.shouldBe(visible, Duration.ofSeconds(10)).click();
     }
 }

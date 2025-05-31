@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,8 +24,9 @@ jobs:
 
       - name: Run tested app
         run: java -jar artifacts/app-ibank-build-for-testers.jar &
+        # & в конце — чтобы запустить в фоне
 
-      - name: Wait for app to start
+      - name: Wait for the app to start
         run: sleep 10
 
       - name: Run tests

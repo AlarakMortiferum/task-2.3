@@ -25,5 +25,10 @@ dependencies {
 
 test {
     useJUnitPlatform()
-    systemProperty 'selenide.headless', 'true'
+
+    // включение headless-режима через параметр при запуске
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+
+    // отключение менеджера паролей Chrome
+    systemProperty 'chromeoptions.prefs', System.getProperty('chromeoptions.prefs', "profile.password_manager_leak_detection=false")
 }

@@ -19,11 +19,11 @@ dependencies {
     // Faker
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
 
-    // Для работы с датами (если нужно)
+
     implementation 'org.apache.commons:commons-lang3:3.12.0'
 }
 
 test {
     useJUnitPlatform()
-    systemProperty 'selenide.headless', 'true'  // << добавляем это
+    systemProperty 'selenide.headless', 'true'
 }

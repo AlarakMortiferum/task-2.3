@@ -1,0 +1,77 @@
+[33mcommit d05e418f941181f986bbbf72fea0c5cf0e9d59fa[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: AlarakMortiferum <sadim1403@gmail.com>
+Date:   Sat May 31 21:17:22 2025 +0300
+
+    Исправление 4
+
+[33mcommit ba5ebf9eeebe64bb85bb2de6ce98fd42de3fc2de[m
+Author: AlarakMortiferum <sadim1403@gmail.com>
+Date:   Sat May 31 20:10:50 2025 +0300
+
+    Исправление 3
+
+[33mcommit a1022d1caaf6bb203c4de2f447843e63364cf423[m
+Author: AlarakMortiferum <sadim1403@gmail.com>
+Date:   Sat May 31 20:09:10 2025 +0300
+
+    Исправление 2
+
+[33mcommit 8117457f13712946fb69ab5eb397afcba3baea06[m
+Author: AlarakMortiferum <sadim1403@gmail.com>
+Date:   Sat May 31 19:34:46 2025 +0300
+
+    Исправление 1
+
+[33mcommit ea4aaff76f5ef30e03c1345c905b21aec1ca330e[m
+Author: AlarakMortiferum <sadim1403@gmail.com>
+Date:   Sat May 31 16:07:23 2025 +0300
+
+    Добавлен headless режим по умолчанию для Selenide2
+
+[33mcommit 154b75049422945fdc8c29e6d7cb7b68e5e42fdd[m
+Author: AlarakMortiferum <sadim1403@gmail.com>
+Date:   Sat May 31 16:06:33 2025 +0300
+
+    Добавлен headless режим по умолчанию для Selenide
+
+[33mcommit e7acaed73c0d389bb3951c1a8445ee714a3d47ce[m
+Author: AlarakMortiferum <sadim1403@gmail.com>
+Date:   Sat May 31 15:17:23 2025 +0300
+
+    Исправлена версия Selenide на 6.19.1 по требованию куратора
+
+[33mcommit 201ef7e0b8ed3b01e3f0ae98aef4350bd7246d0e[m
+Author: AlarakMortiferum <sadim1403@gmail.com>
+Date:   Sat May 31 15:15:58 2025 +0300
+
+    Поправка 1
+
+[33mcommit 193882eb4341be984425f6254f6409dfbca9f00c[m
+Author: AlarakMortiferum <sadim1403@gmail.com>
+Date:   Sat May 31 15:15:05 2025 +0300
+
+    Исправлена версия Selenide на 6.19.1 по требованию куратора
+
+[33mcommit 3f182b6fecd718bbf6b5029ee4844df78be1a64e[m
+Author: AlarakMortiferum <sadim1403@gmail.com>
+Date:   Sat May 31 14:25:51 2025 +0300
+
+    Поправка 2
+
+[33mcommit 27b3ef2fd29b3fa59feea86bd1d0ae8b9c710284[m
+Author: AlarakMortiferum <sadim1403@gmail.com>
+Date:   Sat May 31 14:20:53 2025 +0300
+
+    Fix CI, use Lombok @Value, clean up dependencies, improve test assertions
+
+[33mcommit bb4a949a533acd5f1c90fb1ba6e086f7d8fcd894[m
+Author: AlarakMortiferum <sadim1403@gmail.com>
+Date:   Sat May 31 13:13:22 2025 +0300
+
+    Add GitHub Actions CI workflow
+
+[33mcommit 5e9ce05b36e203d374370b9646639d57bc1dbc58[m
+Author: AlarakMortiferum <sadim1403@gmail.com>
+Date:   Fri May 30 22:16:35 2025 +0300
+
+    Помогите

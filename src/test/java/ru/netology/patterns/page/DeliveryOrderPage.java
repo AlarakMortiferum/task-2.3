@@ -3,11 +3,12 @@ package ru.netology.patterns.page;
 import com.codeborne.selenide.SelenideElement;
 import ru.netology.patterns.data.UserInfo;
 import org.openqa.selenium.Keys;
+
 import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Condition.*;
 
 public class DeliveryOrderPage {
 
@@ -22,25 +23,26 @@ public class DeliveryOrderPage {
 
     public void fillForm(UserInfo user, String date) {
         cityField.setValue(user.getCity());
-        dateField.doubleClick().sendKeys(Keys.BACK_SPACE);
-        dateField.setValue(date);
+        setDate(date);
         nameField.setValue(user.getName());
         phoneField.setValue(user.getPhone());
         agreeCheckbox.click();
-        $x("//span[text()='Запланировать']/ancestor::button").click();
+        submitForm();
+    }
+
+    public void setDate(String date) {
+        dateField.doubleClick().sendKeys(Keys.BACK_SPACE);
+        dateField.setValue(date);
+    }
+
+    public void submitForm() {
+        submitButton.click();
     }
 
     public void checkSuccessNotificationVisible(String expectedDate) {
         successNotification
-                .shouldBe(visible, Duration.ofSeconds(20))
+                .shouldBe(visible, Duration.ofSeconds(15))
                 .shouldHave(text("Встреча успешно запланирована на " + expectedDate));
-    }
-
-    public void clearForm() {
-        cityField.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
-        dateField.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
-        nameField.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
-        phoneField.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
     }
 
     public void confirmReplan() {

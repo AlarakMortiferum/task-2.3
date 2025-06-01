@@ -21,9 +21,8 @@ public class DeliveryTest {
         page.fillForm(user, firstDate);
         page.checkSuccessNotificationVisible(firstDate);
 
-        page.clearForm();
-
-        page.fillForm(user, secondDate);
+        page.setDate(secondDate);
+        page.submitForm();
         page.confirmReplan();
         page.checkSuccessNotificationVisible(secondDate);
     }

@@ -7,6 +7,7 @@ import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class DeliveryOrderPage {
 
@@ -15,8 +16,8 @@ public class DeliveryOrderPage {
     private SelenideElement nameField = $("[data-test-id=name] input");
     private SelenideElement phoneField = $("[data-test-id=phone] input");
     private SelenideElement agreeCheckbox = $("[data-test-id=agreement]");
-    private SelenideElement submitButton = $("[type=button]");
-    private SelenideElement successNotification = $("[data-test-id=success-notification]");
+    private SelenideElement submitButton = $x("//span[text()='Запланировать']/ancestor::button");
+    private SelenideElement successNotification = $(".notification.notification_visible[data-test-id=success-notification]");
     private SelenideElement replanButton = $("[data-test-id=replan-notification] button.button");
 
     public void fillForm(UserInfo user, String date) {
@@ -32,8 +33,14 @@ public class DeliveryOrderPage {
     public void checkSuccessNotificationVisible(String expectedDate) {
         successNotification
                 .shouldBe(visible, Duration.ofSeconds(20))
-                .shouldHave(cssClass("notification_visible"))
-                .shouldHave(text("Встреча успешно забронирована на " + expectedDate));
+                .shouldHave(text("Встреча успешно запланирована на " + expectedDate));
+    }
+
+    public void clearForm() {
+        cityField.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
+        dateField.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
+        nameField.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
+        phoneField.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
     }
 
     public void confirmReplan() {

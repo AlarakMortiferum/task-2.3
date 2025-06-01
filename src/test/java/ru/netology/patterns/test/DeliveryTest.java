@@ -2,7 +2,7 @@ package ru.netology.patterns.test;
 
 import org.junit.jupiter.api.Test;
 import ru.netology.patterns.data.DataGenerator;
-import ru.netology.patterns.data.DataGenerator.UserInfo;
+import ru.netology.patterns.data.UserInfo;
 import ru.netology.patterns.page.DeliveryOrderPage;
 
 import static com.codeborne.selenide.Selenide.open;

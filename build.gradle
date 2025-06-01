@@ -2,8 +2,8 @@ plugins {
     id 'java'
 }
 
-group 'ru.netology'
-version '1.0-SNAPSHOT'
+group = 'ru.netology'
+version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -34,4 +34,8 @@ test {
 
     // отключение менеджера паролей Chrome
     systemProperty 'chromeoptions.prefs', System.getProperty('chromeoptions.prefs', "profile.password_manager_leak_detection=false")
+}
+// Указание кодировки для корректной работы XPath с кириллицей
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }

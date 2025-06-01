@@ -1,7 +1,7 @@
 package ru.netology.patterns.page;
 
 import com.codeborne.selenide.SelenideElement;
-import ru.netology.patterns.data.DataGenerator.UserInfo;
+import ru.netology.patterns.data.UserInfo;
 import org.openqa.selenium.Keys;
 import java.time.Duration;
 
@@ -27,7 +27,7 @@ public class DeliveryOrderPage {
         nameField.setValue(user.getName());
         phoneField.setValue(user.getPhone());
         agreeCheckbox.click();
-        submitButton.click();
+        $x("//span[text()='Запланировать']/ancestor::button").click();
     }
 
     public void checkSuccessNotificationVisible(String expectedDate) {
